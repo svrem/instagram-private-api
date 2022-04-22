@@ -3,7 +3,7 @@ import { CheckpointResponse } from '../responses';
 
 export class IgCheckpointError extends IgResponseError<CheckpointResponse> {
   get url() {
-    return this.response.body.challenge.url;
+    return this.response.body.checkpoint_url;
   }
 
   get apiUrl() {
