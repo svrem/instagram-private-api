@@ -149,7 +149,7 @@ export class Request {
       return new IgNotFoundError(response);
     }
     if (typeof json.message === 'string') {
-      if (json.message === 'challenge_required') {
+      if (json.message === 'checkpoint_required') {
         this.client.state.checkpoint = json;
         return new IgCheckpointError(response);
       }
